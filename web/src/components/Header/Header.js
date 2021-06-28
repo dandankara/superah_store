@@ -1,20 +1,26 @@
 import React from 'react'
-import ContainerHeader from './style'
+import { ContainerHeader, Home, Cart, Search } from './styles'
 import Carrinho from '../../assets/CartIcon.png'
 import HomeIcon from '../../assets/HomeIcon.png'
 
 const Header = () => {
   return (
     <ContainerHeader>
-      <button>
-        <img src={HomeIcon} alt="Home" />
-      </button>
 
-      <input type="text" name="Buscar" placeholder="Busca" />
+      <Home>
+        <button>
+        <input type="image" src={HomeIcon} alt="HomeIcon" />
+        </button>
 
-      <button>
+      </Home>
+
+      <Search placeholder="Buscar" /> 
+
+      <Cart>
       <img src={Carrinho} alt="carrinho" />
-      </button>
+      </Cart>
+
+
     </ContainerHeader>
   )
 }
