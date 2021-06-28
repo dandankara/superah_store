@@ -9,6 +9,7 @@ const CardGames = () => {
     axios.get('http://localhost:5000/games')
       .then((res => {
         setGame(res.data)
+        console.log(res.data)
       }));
   }, []);
 
@@ -20,7 +21,7 @@ const CardGames = () => {
           <li key={games.id}>
             <span> {games.name} </span>
             <span> {games.price} </span>
-            <span> {games.image} </span>
+            <img src={games.image} alt="games" />
           </li>
         </div>
       ))}
