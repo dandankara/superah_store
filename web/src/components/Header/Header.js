@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContainerHeader, Home, Cart, Search } from './styles'
+import { ContainerHeader, HomeButton, CarButton, Search } from './styles'
 import Carrinho from '../../assets/CartIcon.png'
 import HomeIcon from '../../assets/HomeIcon.png'
 
@@ -7,18 +7,15 @@ const Header = () => {
   return (
     <ContainerHeader>
 
-      <Home>
-        <button>
-        <input type="image" src={HomeIcon} alt="HomeIcon" />
-        </button>
+      <HomeButton>
+        <img src={HomeIcon} alt="HomeIcon" />
+      </HomeButton>
 
-      </Home>
+      <Search placeholder="   Buscar" /> 
 
-      <Search placeholder="Buscar" /> 
-
-      <Cart>
+      <CarButton>
       <img src={Carrinho} alt="carrinho" />
-      </Cart>
+      </CarButton>
 
 
     </ContainerHeader>
