@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import CardGames from './components/CardGames/CardGames'
 
 const App = () => {
   return (
-   <div>Daniel Cunha</div>
+    <CardGames />
   )
 }
 
