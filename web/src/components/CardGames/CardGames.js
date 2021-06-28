@@ -17,12 +17,15 @@ const CardGames = () => {
 
     <div>
       {game.map((games) => (
-        <div>
-          <li key={games.id}>
+        <div className="Container">
+
+          <div className="Name">
             <span> {games.name} </span>
+          </div>
+
+         <img src={games.image} alt="gamesphoto" /> <br />
+
             <span> {games.price} </span>
-            <img src={games.image} alt="games" />
-          </li>
         </div>
       ))}
     </div>
