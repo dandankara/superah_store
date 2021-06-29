@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { ContainerCard, Card, CardGame } from './styles'
 
 const CardGames = () => {
 
@@ -15,20 +16,20 @@ const CardGames = () => {
 
   return (
 
-    <div>
+    <ContainerCard>
       {game.map((games) => (
-        <div className="Container">
+        <Card>
 
-          <div className="Name">
+          <CardGame>
             <span> {games.name} </span>
-          </div>
+            <img src={games.image} alt="gamesphoto" /> <br />
+            <span> R${games.price} </span>
+          </CardGame>
 
-         <img src={games.image} alt="gamesphoto" /> <br />
 
-            <span> {games.price} </span>
-        </div>
+        </Card>
       ))}
-    </div>
+    </ContainerCard>
 
   )
 }
