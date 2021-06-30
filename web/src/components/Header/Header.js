@@ -3,8 +3,16 @@ import { ContainerHeader, HomeButton, CarButton, Search } from './styles'
 import Carrinho from '../../assets/CartIcon.png'
 import HomeIcon from '../../assets/HomeIcon.png'
 
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from 'react-router'
+
 const Header = () => {
   return (
+    
     <ContainerHeader>
 
       <HomeButton>
@@ -19,6 +27,7 @@ const Header = () => {
 
 
     </ContainerHeader>
+    
   )
 }
 
