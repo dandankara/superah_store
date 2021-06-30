@@ -3,31 +3,38 @@ import { ContainerHeader, HomeButton, CarButton, Search } from './styles'
 import Carrinho from '../../assets/CartIcon.png'
 import HomeIcon from '../../assets/HomeIcon.png'
 
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from 'react-router'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
 
 const Header = () => {
   return (
-    
+
     <ContainerHeader>
 
-      <HomeButton>
-        <img src={HomeIcon} alt="HomeIcon" />
-      </HomeButton>
+      <Router>
+      <Switch>
+        <Route path="/" to="/">
+          <HomeButton>
+            <img src={HomeIcon} alt="HomeIcon" />
+          </HomeButton>
+        </Route>
+      </Switch>
 
-      <Search placeholder="   Buscar" /> 
+      <Search placeholder="   Buscar" />
 
       <CarButton>
-      <img src={Carrinho} alt="carrinho" />
+        <img src={Carrinho} alt="carrinho" />
       </CarButton>
+
+      </Router>
 
 
     </ContainerHeader>
-    
+
   )
 }
 

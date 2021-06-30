@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const ContainerCard = styled.div`
-max-width: 100%;
-display: flex;
-flex-wrap: wrap;
-padding: 2rem;
+display: grid;
+padding: 1rem;
 justify-content: center;
+grid-template-columns: 400px 400px 400px;
+/* grid-auto-flow: column; */
 `;
 
 const CardGame = styled.div`
@@ -13,17 +13,22 @@ const CardGame = styled.div`
   flex-grow: 1;
   border: 1px solid;
   background-color: aliceblue;
+  padding: 0ch.5rem;
   
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
-  align-items: center;
-  flex: 0 1 n;
+  
+  
 
   span:first-child{
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-weight: 800;
+    align-self: center;
   }
-  span:last-child{
+  span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: center;
   }
 
   button{
@@ -42,6 +47,7 @@ const CardGame = styled.div`
 	  padding:6px 24px;
 	  text-decoration:none;
 	  text-shadow:0px 1px 0px #854629;
+    align-self: center;
   }
 
   button:hover {
@@ -55,6 +61,7 @@ button:active {
 
   img{
     border: 1px solid;
+    align-self: center;
   }
 `;
 
